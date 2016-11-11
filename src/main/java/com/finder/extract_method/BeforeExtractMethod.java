@@ -14,9 +14,14 @@ public class BeforeExtractMethod {
 
     public void pringOwing(double amount){
         printBanner();
+        printDetail(amount);
+    }
+
+    private void printDetail(double amount) {
         System.out.println("name" + _name);
         System.out.println("amount" + amount);
     }
+
     private void printBanner(){
 
     }

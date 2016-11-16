@@ -14,13 +14,20 @@ public class ReplaceTempWithQuery {
     private int quantity = 3;
     
     private double getPrice(){
-        int basePrice = this.quantity * this.itemPrice;
-        double discountFactor;
-        if(basePrice > 1000){
+        return basePrice() * getDiscountFactor();
+    }
+
+    private double getDiscountFactor() {
+        final double discountFactor;
+        if(basePrice() > 1000){
             discountFactor = 0.95;
         }else {
             discountFactor = 0.98;
         }
-        return basePrice * discountFactor;
+        return discountFactor;
+    }
+
+    private int basePrice() {
+        return this.quantity * this.itemPrice;
     }
 }

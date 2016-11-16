@@ -4,6 +4,8 @@
  */
 package com.finder.reorgnaize_method.extract_method;
 
+import sun.print.DocumentPropertiesUI;
+
 import java.util.Enumeration;
 import java.util.Vector;
 
@@ -17,19 +19,25 @@ public class ExtractMethod {
     private String name;
 
     public void printOwing(){
-        Enumeration e = this.orders.elements();
-        Double outstanding = 0.0;
 
         //print banner
         printBanner();
 
         //caculate outstanding
+        Double outstanding = getOutstanding();
+
+        //print details
+        printDetails(outstanding);
+    }
+
+    private Double getOutstanding() {
+        Enumeration e = this.orders.elements();
+        Double outstanding = 0.0;
         while(e.hasMoreElements()){
             Order each = (Order)e.nextElement();
             outstanding += each.getAmount();
         }
-        //print details
-        printDetails(outstanding);
+        return outstanding;
     }
 
     private void printDetails(Double outstanding) {

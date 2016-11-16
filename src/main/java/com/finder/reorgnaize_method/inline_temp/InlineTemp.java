@@ -15,8 +15,7 @@ public class InlineTemp {
     private Order order = new Order();
 
     public boolean inlineTemp(){
-        int basePrice = order.getAmount();
-        return (basePrice > 1000);
+        return (order.getAmount() > 1000);
     }
 
 

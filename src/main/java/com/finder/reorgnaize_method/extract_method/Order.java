@@ -34,7 +34,7 @@ public class Order {
      *
      * @param amount value to be assigned to property amount
      */
-    public void setAmount(int amount) {
+    void setAmount(int amount) {
         this.amount = amount;
     }
 }

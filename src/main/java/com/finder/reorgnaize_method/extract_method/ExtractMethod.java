@@ -20,6 +20,7 @@ public class ExtractMethod {
         Enumeration e = this.orders.elements();
         Double outstanding = 0.0;
 
+        //print banner
         printBanner();
 
         //caculate outstanding
@@ -28,12 +29,15 @@ public class ExtractMethod {
             outstanding += each.getAmount();
         }
         //print details
+        printDetails(outstanding);
+    }
+
+    private void printDetails(Double outstanding) {
         System.out.println("name:" + this.name);
         System.out.println("amount:" + outstanding);
     }
 
     private void printBanner() {
-        //print banner
         System.out.println("*************************");
         System.out.println("***** Customer Owes *****");
         System.out.println("*************************");

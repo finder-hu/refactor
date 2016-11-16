@@ -14,10 +14,13 @@ public class IntroduceExplaniningVariable {
     private double itemPrice;
 
     private double price(){
-        double basePrice = this.quantity * this.itemPrice;
         double quantityDiscount = Math.max(0, this.quantity - 500) * this.itemPrice * 0.05;
-        double shipping = Math.min(basePrice * 0.1, 100.0);
-        return basePrice - quantityDiscount + shipping;
+        double shipping = Math.min(basePrice() * 0.1, 100.0);
+        return basePrice() - quantityDiscount + shipping;
+    }
+
+    private double basePrice() {
+        return this.quantity * this.itemPrice;
     }
 
     /**

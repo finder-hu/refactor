@@ -17,14 +17,14 @@ public class SplitTemporaryVariable {
 
     public double getDistanceTravelled(int time){
         double result;
-        double acc = this.primaryForce/this.mass;
+        final double acc = this.primaryForce/this.mass;
         int primaryTime = Math.min(time,this.delay);
         result = 0.5 * acc * primaryTime * primaryTime;
         int secondTime = time - this.delay;
         if(secondTime > 0){
             double primaryVel = acc * this.delay;
-            acc = (this.primaryForce + this.secondaryForce)/this.mass;
-            result += primaryVel * secondTime + 0.5 * acc * secondTime * secondTime;
+            final double secondaryAcc = (this.primaryForce + this.secondaryForce)/this.mass;
+            result += primaryVel * secondTime + 0.5 * secondaryAcc * secondTime * secondTime;
         }
         return result;
     }

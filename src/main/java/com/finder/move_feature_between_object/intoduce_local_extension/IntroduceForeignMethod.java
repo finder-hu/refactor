@@ -14,11 +14,6 @@ import java.util.Date;
 public class IntroduceForeignMethod {
     public void refactor(){
         Date previousEnd = new Date();
-        Date newStart = nextDay(previousEnd);
-    }
-
-    private Date nextDay(Date previousEnd){
-        return new Date(previousEnd.getYear(),
-                previousEnd.getMonth(),previousEnd.getDate()+1);
+        Date newStart = MfDateSub.nextDay(previousEnd);
     }
 }

@@ -4,7 +4,7 @@
  */
 package com.finder.move_feature_between_object.remove_middle_man;
 
-import com.finder.move_feature_between_object.hide_delegate.person.Person;
+import com.finder.move_feature_between_object.remove_middle_man.person.Person;
 
 /**
  *
@@ -15,7 +15,7 @@ public class Client {
     private Person person;
 
     public void someWork(){
-        Person manager = person.getManager();
+        Person manager = person.getDepartment().getManager();
     }
 }
 

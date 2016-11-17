@@ -12,9 +12,14 @@ package com.finder.move_feature_between_object.remove_middle_man.person;
 public class Person {
     private Department department;
 
+    /**
+     * Getter method for property <tt>department</tt>.
+     *
+     * @return property value of department
+     */
 
-    public Person getManager(){
-        return department.getManager();
+    public Department getDepartment() {
+        return department;
     }
 
     /**

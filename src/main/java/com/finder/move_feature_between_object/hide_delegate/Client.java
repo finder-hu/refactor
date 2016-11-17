@@ -15,7 +15,7 @@ public class Client {
     private Person person;
 
     public void someWork(){
-        Person manager = person.getDepartment().getManager();
+        Person manager = person.getManager();
     }
 }
 

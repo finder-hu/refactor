@@ -13,15 +13,8 @@ public class Person {
     private Department department;
 
 
-
-    /**
-     * Getter method for property <tt>department</tt>.
-     *
-     * @return property value of department
-     */
-
-    public Department getDepartment() {
-        return department;
+    public Person getManager(){
+        return department.getManager();
     }
 
     /**

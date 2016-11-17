@@ -12,22 +12,11 @@ package com.finder.move_feature_between_object.move_method;
 public class Account {
     private int daysOverdraw;
     private AccountType type;
-    public double overdraftCharge(){
-        if(this.type.isPremium()){
-            double result = 10;
-            if(this.daysOverdraw > 7){
-                result += (this.daysOverdraw - 7) * 0.85;
-            }
-            return result;
-        }else {
-            return this.daysOverdraw * 1.75;
-        }
-    }
 
     double bankCharge(){
         double result = 4.5;
-        if( this.daysOverdraw > 0){
-            result += overdraftCharge();
+        if( daysOverdraw > 0){
+            result += type.overdraftCharge(daysOverdraw);
         }
         return result;
     }

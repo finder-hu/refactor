@@ -13,4 +13,16 @@ public class AccountType {
     public boolean isPremium(){
         return true;
     }
+
+    public double overdraftCharge(int dayOverdraw){
+        if(isPremium()){
+            double result = 10;
+            if(dayOverdraw > 7){
+                result += (dayOverdraw - 7) * 0.85;
+            }
+            return result;
+        }else {
+            return dayOverdraw * 1.75;
+        }
+    }
 }

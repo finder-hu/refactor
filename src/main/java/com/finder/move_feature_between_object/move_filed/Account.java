@@ -13,10 +13,9 @@ import com.finder.move_feature_between_object.move_method.AccountType;
  */
 public class Account {
     private AccountType type;
-    private double interestRate;
 
     public double interestForAmount_days(double amount, int days){
-        return interestRate * amount * days / 365;
+        return type.getInterestRate() * amount * days / 365;
     }
 
     /**
@@ -36,24 +35,5 @@ public class Account {
      */
     public void setType(AccountType type) {
         this.type = type;
-    }
-
-    /**
-     * Getter method for property <tt>interestRate</tt>.
-     *
-     * @return property value of interestRate
-     */
-
-    public double getInterestRate() {
-        return interestRate;
-    }
-
-    /**
-     * Setter method for property <tt>interestRate</tt>.
-     *
-     * @param interestRate value to be assigned to property interestRate
-     */
-    public void setInterestRate(double interestRate) {
-        this.interestRate = interestRate;
     }
 }

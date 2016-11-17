@@ -11,6 +11,27 @@ package com.finder.move_feature_between_object.move_method;
  */
 public class AccountType {
 
+    private double interestRate;
+
+    /**
+     * Getter method for property <tt>interestRate</tt>.
+     *
+     * @return property value of interestRate
+     */
+
+    public double getInterestRate() {
+        return interestRate;
+    }
+
+    /**
+     * Setter method for property <tt>interestRate</tt>.
+     *
+     * @param interestRate value to be assigned to property interestRate
+     */
+    public void setInterestRate(double interestRate) {
+        this.interestRate = interestRate;
+    }
+
     public boolean isPremium(){
         return true;
     }

@@ -10,6 +10,7 @@ package com.finder.move_feature_between_object.move_method;
  * @version $Id: AccountType.java, V 0.1 2016-11-17 10:02 Finderhu Exp $
  */
 public class AccountType {
+
     public boolean isPremium(){
         return true;
     }

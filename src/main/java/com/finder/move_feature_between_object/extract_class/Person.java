@@ -11,20 +11,13 @@ package com.finder.move_feature_between_object.extract_class;
  */
 public class Person {
     private String name;
-    private String officeAreaCode;
-    private String officeNumber;
-
-
-    public String getTelephoneNumber(){
-        return ("(" + officeAreaCode + ")" +officeNumber);
-    }
+    private TelephoneNumber telephoneNumber = new TelephoneNumber();
 
     /**
      * Getter method for property <tt>name</tt>.
      *
      * @return property value of name
      */
-
     public String getName() {
         return name;
     }
@@ -38,41 +31,4 @@ public class Person {
         this.name = name;
     }
 
-    /**
-     * Getter method for property <tt>officeAreaCode</tt>.
-     *
-     * @return property value of officeAreaCode
-     */
-
-    public String getOfficeAreaCode() {
-        return officeAreaCode;
-    }
-
-    /**
-     * Setter method for property <tt>officeAreaCode</tt>.
-     *
-     * @param officeAreaCode value to be assigned to property officeAreaCode
-     */
-    public void setOfficeAreaCode(String officeAreaCode) {
-        this.officeAreaCode = officeAreaCode;
-    }
-
-    /**
-     * Getter method for property <tt>officeNumber</tt>.
-     *
-     * @return property value of officeNumber
-     */
-
-    public String getOfficeNumber() {
-        return officeNumber;
-    }
-
-    /**
-     * Setter method for property <tt>officeNumber</tt>.
-     *
-     * @param officeNumber value to be assigned to property officeNumber
-     */
-    public void setOfficeNumber(String officeNumber) {
-        this.officeNumber = officeNumber;
-    }
 }

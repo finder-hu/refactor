@@ -13,11 +13,26 @@ public class IntRange {
     }
 
     public boolean includes(int arg){
-        return arg >= this.low && arg <= this.high;
+        return arg >= this.getLow() && arg <= this.getHigh();
     }
 
     public void grow(int factor){
-        this.high = this.high * factor;
+        this.setHigh(this.getHigh() * factor);
     }
 
+    public int getLow() {
+        return low;
+    }
+
+    public void setLow(int low) {
+        this.low = low;
+    }
+
+    public int getHigh() {
+        return high;
+    }
+
+    public void setHigh(int high) {
+        this.high = high;
+    }
 }

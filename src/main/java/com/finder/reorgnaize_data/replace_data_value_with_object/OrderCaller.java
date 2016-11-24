@@ -12,7 +12,7 @@ public class OrderCaller {
         Iterator iter = orders.iterator();
         while(iter.hasNext()){
             Order order = (Order)iter.next();
-            if(order.getCustomer().equals(customer)){
+            if(order.getCustomerName().equals(customer)){
                 result++;
             }
         }

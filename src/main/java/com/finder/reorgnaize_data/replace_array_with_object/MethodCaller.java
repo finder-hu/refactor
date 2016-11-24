@@ -5,10 +5,10 @@ package com.finder.reorgnaize_data.replace_array_with_object;
  */
 public class MethodCaller {
 
-    public void caller(String[] row){
-        row[0] = "Liverpool";
-        row[1] = "15";
-        String name = row[0];
-        int wins = Integer.parseInt(row[1]);
+    public void caller(Performence row){
+        row.setName("Liverpool");
+        row.setWins(15);
+        String name = row.getName();
+        int wins = row.getWins();
     }
 }

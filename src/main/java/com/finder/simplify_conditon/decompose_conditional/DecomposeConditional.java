@@ -13,10 +13,24 @@ public class DecomposeConditional {
 
     public void calculate(Date date, int quantity){
         int charge;
-        if(date.before(SUMMER_START) || date.after(SUMMER_END)){
-            charge = quantity * this.winterRate;
+        if(notSummer(date)){
+            winterCharge(quantity);
         }else {
-            charge = quantity * this.summerRate;
+            summerCharge(quantity);
         }
+    }
+
+    private void summerCharge(int quantity) {
+        int charge;
+        charge = quantity * this.summerRate;
+    }
+
+    private void winterCharge(int quantity) {
+        int charge;
+        charge = quantity * this.winterRate;
+    }
+
+    private boolean notSummer(Date date) {
+        return date.before(SUMMER_START) || date.after(SUMMER_END);
     }
 }

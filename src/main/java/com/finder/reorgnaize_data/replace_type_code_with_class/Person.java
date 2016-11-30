@@ -1,4 +1,6 @@
-package com.finder.reorgnaize_data;
+package com.finder.reorgnaize_data.replace_type_code_with_class;
+
+import com.finder.reorgnaize_data.replace_type_code_with_class.BloodGroup;
 
 /**
  * Created by longhuai.hlh on 2016/11/24.

@@ -1,4 +1,4 @@
-package com.finder.reorgnaize_data;
+package com.finder.reorgnaize_data.replace_type_code_with_class;
 
 import java.util.ArrayList;
 import java.util.List;

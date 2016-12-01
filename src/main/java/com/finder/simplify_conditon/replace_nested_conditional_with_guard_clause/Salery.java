@@ -9,23 +9,10 @@ public class Salery {
     private boolean isRetired;
 
     public double getPayAmount(){
-        double result;
-        if(isDead){
-            result = deadAmount();
-        }
-        else{
-            if(isSeperated) {
-                result = separatedAmount();
-            }else {
-                if(isRetired){
-                    result = retiredAmount();
-                }else {
-                    result = mormalAmount();
-                }
-            }
-
-        }
-        return result;
+        if(isDead) return deadAmount();
+        if(isSeperated) return separatedAmount();
+        if(isRetired) return retiredAmount();
+        return mormalAmount();
     }
 
     private double mormalAmount() {

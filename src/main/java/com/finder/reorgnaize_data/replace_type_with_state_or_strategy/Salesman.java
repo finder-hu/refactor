@@ -7,4 +7,9 @@ public class Salesman extends EmployeeType {
     public int getTypeCode() {
         return EmployeeType.SALESMAN;
     }
+
+    @Override
+    public int payAmount(Employee employee) {
+        return employee.getMonthSalary() + employee.getCommission();
+    }
 }

@@ -19,4 +19,6 @@ public abstract class EmployeeType {
             default: throw new IllegalArgumentException("Incorrect Employee code");
         }
     }
+
+    public abstract int payAmount(Employee employee);
 }

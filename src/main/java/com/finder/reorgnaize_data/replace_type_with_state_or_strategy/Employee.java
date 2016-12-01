@@ -15,19 +15,37 @@ public class Employee {
     }
 
     public int payAmount(){
-        switch (this.getType()){
-            case EmployeeType.ENGINEER: return this.monthSalary;
-            case EmployeeType.SALESMAN: return this.monthSalary + this.commission;
-            case EmployeeType.MANAGER: return this.monthSalary + this.bonus;
-            default: throw new RuntimeException("incorrect employee");
-        }
+        return this.employeeType.payAmount(this);
     }
-
     public int getType() {
         return employeeType.getTypeCode();
     }
 
     public void setType(int type) {
         this.employeeType = EmployeeType.newType(type);
+    }
+
+    public int getMonthSalary() {
+        return monthSalary;
+    }
+
+    public void setMonthSalary(int monthSalary) {
+        this.monthSalary = monthSalary;
+    }
+
+    public int getCommission() {
+        return commission;
+    }
+
+    public void setCommission(int commission) {
+        this.commission = commission;
+    }
+
+    public int getBonus() {
+        return bonus;
+    }
+
+    public void setBonus(int bonus) {
+        this.bonus = bonus;
     }
 }
